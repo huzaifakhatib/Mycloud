@@ -75,3 +75,14 @@ Choose initial position of upload:
 1. From start of file.                                                                                                  
 2. From end of file.                                                                                                  
 Enter choice [1]: 1  
+
+IF PYTHON NOT WORKING :
+					sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+	  		-a fetch-config \
+  			-m ec2 \
+  			-c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json \
+  			-s
+
+*In the AWS Console, go to CloudWatch → Logs → Log groups and you should see syslog with streams named after your EC2 instance ID.
+
+
